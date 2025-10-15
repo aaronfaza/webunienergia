@@ -44,64 +44,7 @@ export default function Contacto() {
     >
       {/* === SEO TAGS === */}
       <Helmet>
-        <title>Contáctanos | Unienergía</title>
-        <meta
-          name="description"
-          content="Ponte en contacto con Unienergía para recibir asesoría sobre energía, proyectos petroleros o soluciones sostenibles. Estamos listos para ayudarte."
-        />
-        <meta
-          name="keywords"
-          content="contacto Unienergía, energía, petróleo, sostenibilidad, proyectos industriales, asesoría energética"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.unienergia.com/contacto" />
-
-        {/* === Open Graph === */}
-        <meta property="og:title" content="Contáctanos | Unienergía" />
-        <meta
-          property="og:description"
-          content="Comunícate con Unienergía para conocer más sobre nuestros servicios energéticos y proyectos industriales."
-        />
-        <meta property="og:image" content="/Unienergia-59.jpg" />
-        <meta property="og:url" content="https://www.unienergia.com/contacto" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="es_PE" />
-
-        {/* === Twitter Card === */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contáctanos | Unienergía" />
-        <meta
-          name="twitter:description"
-          content="Estamos aquí para resolver tus dudas y trabajar contigo en soluciones energéticas sostenibles."
-        />
-        <meta name="twitter:image" content="/Unienergia-59.jpg" />
-
-        {/* === Schema.org === */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Unienergía",
-            url: "https://www.unienergia.com",
-            logo: "/logo.png",
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+51 987 654 321",
-              contactType: "Atención al cliente",
-              email: "contacto@unienergia.com",
-              areaServed: "PE",
-              availableLanguage: ["Español", "Inglés"],
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Av. Canaval y Moreyra 425",
-              addressLocality: "San Isidro",
-              addressRegion: "Lima",
-              postalCode: "15047",
-              addressCountry: "PE",
-            },
-          })}
-        </script>
+        <title>Contacto - Unienergia | Energía y Servicios Petroleros</title>
       </Helmet>
 
       {/* === Título principal === */}
