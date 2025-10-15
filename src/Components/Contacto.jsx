@@ -24,7 +24,6 @@ export default function Contacto() {
     const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-
     emailjs
       .send(serviceID, templateID, formData, publicKey)
       .then(() => {
@@ -43,12 +42,10 @@ export default function Contacto() {
       id="contacto"
       className="relative py-20 bg-gradient-to-r from-[#E6D9AA]/20 via-white to-[#E6D9AA]/20 text-gray-900 overflow-hidden"
     >
-      {/* === SEO TAGS === */}
       <Helmet>
-        <title>Unienergia | Energía y Servicios Petroleros</title>
+        <title>Contáctanos | Unienergia</title>
       </Helmet>
 
-      {/* === Título principal === */}
       <div className="text-center mb-12">
         <h1 className="font-manrope text-4xl md:text-5xl font-extrabold text-[#711610]">
           Contáctanos
@@ -59,9 +56,7 @@ export default function Contacto() {
         </p>
       </div>
 
-      {/* === Contenido principal === */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 lg:px-12">
-        {/* Información de contacto */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -69,7 +64,6 @@ export default function Contacto() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          {/* Correo */}
           <div className="flex items-center gap-4">
             <div className="p-4 rounded-full bg-[#0033A0] shadow-lg">
               <Mail className="text-white" />
@@ -79,12 +73,11 @@ export default function Contacto() {
                 Correo electrónico
               </h2>
               <p className="font-opensans text-[#9A999D]">
-                contacto@unienergia.com
+                contacto@unienergia.pe
               </p>
             </div>
           </div>
 
-          {/* Teléfono */}
           <div className="flex items-center gap-4">
             <div className="p-4 rounded-full bg-[#711610] shadow-lg">
               <Phone className="text-white" />
@@ -97,7 +90,6 @@ export default function Contacto() {
             </div>
           </div>
 
-          {/* Ubicación */}
           <div className="flex items-center gap-4">
             <div className="p-4 rounded-full bg-[#4CA23C] shadow-lg">
               <MapPin className="text-white" />
@@ -113,7 +105,6 @@ export default function Contacto() {
           </div>
         </motion.div>
 
-        {/* Formulario */}
         <motion.form
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 40 }}
@@ -121,7 +112,6 @@ export default function Contacto() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="bg-white p-8 rounded-2xl shadow-xl space-y-6 border border-[#E6D9AA]/40"
-          aria-label="Formulario de contacto de Unienergía"
         >
           <div>
             <label
@@ -137,7 +127,7 @@ export default function Contacto() {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 font-opensans focus:ring-2 focus:ring-[#711610] outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 font-opensans focus:ring-2 focus:ring-[#711610] outline-none"
             />
           </div>
 
@@ -155,7 +145,7 @@ export default function Contacto() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 font-opensans focus:ring-2 focus:ring-[#0033A0] outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 font-opensans focus:ring-2 focus:ring-[#0033A0] outline-none"
             />
           </div>
 
@@ -173,7 +163,7 @@ export default function Contacto() {
               onChange={handleChange}
               rows="4"
               required
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 font-opensans focus:ring-2 focus:ring-[#4CA23C] outline-none transition resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 font-opensans focus:ring-2 focus:ring-[#4CA23C] outline-none resize-none"
             />
           </div>
 

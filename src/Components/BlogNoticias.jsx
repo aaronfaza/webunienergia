@@ -84,7 +84,7 @@ const BlogNoticias = () => {
     >
       {/* SEO */}
       <Helmet>
-        <title>Blog de Noticias | UNIENERGÍA</title>
+        <title>UNIENERGÍA</title>
         <meta
           name="description"
           content="Noticias y actualizaciones sobre energía, sostenibilidad, innovación tecnológica y responsabilidad social en UNIENERGÍA."
@@ -93,7 +93,7 @@ const BlogNoticias = () => {
           name="keywords"
           content="energía, sostenibilidad, petróleo, innovación, UNIENERGÍA, noticias energéticas, tecnología"
         />
-        <meta property="og:title" content="Blog de Noticias | UNIENERGÍA" />
+        <meta property="og:title" content="UNIENERGÍA" />
         <meta
           property="og:description"
           content="Mantente informado sobre los proyectos energéticos, ambientales y sociales de UNIENERGÍA."
@@ -102,7 +102,7 @@ const BlogNoticias = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.tu-dominio.com/blog-noticias"
+          content="https://www.unienergia.pe/blog"
         />
       </Helmet>
 
