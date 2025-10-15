@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Leaf, Wind, Users, Heart } from "lucide-react";
 
 const actividades = {
@@ -6,19 +7,19 @@ const actividades = {
     {
       titulo: "Monitoreo de aire",
       descripcion:
-        "Controlamos periódicamente la calidad del aire mediante equipos especializados que garantizan que las emisiones cumplan con las normas ambientales.",
+        "Controlamos la calidad del aire con equipos especializados que garantizan el cumplimiento de las normas ambientales.",
       imagen: "/aire.jpg",
     },
     {
       titulo: "Revegetación",
       descripcion:
-        "Promovemos la siembra de especies nativas para recuperar zonas intervenidas y proteger la biodiversidad del entorno.",
+        "Promovemos la siembra de especies nativas para recuperar zonas afectadas y proteger la biodiversidad local.",
       imagen: "/revegetacion.jpg",
     },
     {
       titulo: "Cuidado de suelos",
       descripcion:
-        "Aplicamos prácticas de conservación para evitar la erosión y mantener la fertilidad del suelo en las áreas de operación.",
+        "Aplicamos prácticas de conservación para evitar la erosión y mantener la fertilidad del suelo.",
       imagen: "/suelos.jpg",
     },
   ],
@@ -26,19 +27,19 @@ const actividades = {
     {
       titulo: "Entrega de víveres",
       descripcion:
-        "Realizamos campañas periódicas de entrega de alimentos y productos básicos a las familias del Lote IX.",
+        "Realizamos campañas de entrega de alimentos y productos básicos a las familias del Lote IX.",
       imagen: "/apoyo.jpeg",
     },
     {
       titulo: "Atención médica",
       descripcion:
-        "Brindamos jornadas de salud y atención médica gratuita para los pobladores cercanos a nuestras operaciones.",
+        "Organizamos jornadas de salud y atención médica gratuita para las comunidades cercanas.",
       imagen: "/medica.jpeg",
     },
     {
       titulo: "Fumigación preventiva",
       descripcion:
-        "Ejecutamos fumigaciones preventivas para controlar la proliferación de plagas y enfermedades vectoriales.",
+        "Ejecutamos fumigaciones preventivas para controlar plagas y enfermedades vectoriales.",
       imagen: "/fumigacion.jpeg",
     },
   ],
@@ -58,35 +59,58 @@ export default function Responsabilidad() {
       id="responsabilidad"
       className="relative py-28 bg-[#F9FAFB] text-gray-900 overflow-hidden"
     >
+      {/* SEO TAGS */}
+      <Helmet>
+        <title>Responsabilidad Social y Ambiental | UNIENERGÍA</title>
+        <meta
+          name="description"
+          content="En UNIENERGÍA reafirmamos nuestro compromiso con la sostenibilidad, el cuidado ambiental y el bienestar de las familias del Lote IX."
+        />
+        <meta
+          name="keywords"
+          content="energía, sostenibilidad, responsabilidad social, medio ambiente, petróleo, UNIENERGÍA"
+        />
+        <meta property="og:title" content="Responsabilidad Social y Ambiental | UNIENERGÍA" />
+        <meta
+          property="og:description"
+          content="Comprometidos con la protección ambiental y el desarrollo social sostenible en el Lote IX."
+        />
+        <meta property="og:image" content="/aire.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.tu-dominio.com/responsabilidad" />
+      </Helmet>
+
       <div
         className={`max-w-7xl mx-auto px-6 lg:px-12 transition-all duration-300 ${
           modal ? "blur-md" : ""
         }`}
       >
-        {/* Título principal */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0075A0] to-[#0033A0] leading-[1.15] pb-3">
+        <header className="text-center mb-20">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0075A0] to-[#0033A0] leading-[1.15] pb-3">
             Responsabilidad Social y Ambiental
-          </h2>
+          </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            En UNIENERGIA reafirmamos nuestro compromiso con la sostenibilidad,
-            velando por el cuidado del medio ambiente y el bienestar de las
-            familias del Lote IX.
+            En UNIENERGÍA reafirmamos nuestro compromiso con la sostenibilidad,
+            velando por el medio ambiente y el bienestar de las familias del Lote IX.
           </p>
-        </div>
+        </header>
 
-        {/* Contenedor principal */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <main className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Ambiental */}
-          <div className="p-10 bg-white border border-gray-200 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-2xl font-bold text-[#4CA23C] mb-6 flex items-center gap-3">
+          <article
+            aria-labelledby="responsabilidad-ambiental"
+            className="p-10 bg-white border border-gray-200 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300"
+          >
+            <h2
+              id="responsabilidad-ambiental"
+              className="text-2xl font-bold text-[#4CA23C] mb-6 flex items-center gap-3"
+            >
               <Leaf className="text-[#4CA23C]" size={28} />
               Responsabilidad Ambiental
-            </h3>
+            </h2>
             <p className="text-gray-700 mb-6">
-              Implementamos medidas de protección ambiental en el Lote IX,
-              garantizando un equilibrio entre la actividad petrolera y la
-              conservación de los ecosistemas.
+              Implementamos medidas de protección ambiental que equilibran la
+              actividad petrolera con la conservación de los ecosistemas.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -101,18 +125,23 @@ export default function Responsabilidad() {
                 </div>
               ))}
             </div>
-          </div>
+          </article>
 
           {/* Social */}
-          <div className="p-10 bg-white border border-gray-200 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-2xl font-bold text-[#0033A0] mb-6 flex items-center gap-3">
+          <article
+            aria-labelledby="responsabilidad-social"
+            className="p-10 bg-white border border-gray-200 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300"
+          >
+            <h2
+              id="responsabilidad-social"
+              className="text-2xl font-bold text-[#0033A0] mb-6 flex items-center gap-3"
+            >
               <Users size={28} className="text-[#0033A0]" />
               Responsabilidad Social
-            </h3>
+            </h2>
             <p className="text-gray-700 mb-6">
-              Apoyamos activamente a las 11 familias del Lote IX, mediante
-              iniciativas que mejoran su calidad de vida y fortalecen el vínculo
-              comunitario.
+              Apoyamos activamente a las familias del Lote IX con programas de salud,
+              educación y bienestar comunitario.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -127,8 +156,8 @@ export default function Responsabilidad() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+          </article>
+        </main>
       </div>
 
       {/* Modal */}
@@ -144,6 +173,7 @@ export default function Responsabilidad() {
             <button
               onClick={cerrarModal}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl"
+              aria-label="Cerrar"
             >
               ✕
             </button>
@@ -151,6 +181,7 @@ export default function Responsabilidad() {
               src={modal.imagen}
               alt={modal.titulo}
               className="w-full h-56 object-cover rounded-2xl mb-6"
+              loading="lazy"
             />
             <h3 className="text-2xl font-bold text-[#4CA23C] mb-4">
               {modal.titulo}
@@ -165,9 +196,7 @@ export default function Responsabilidad() {
           from { opacity: 0; transform: scale(0.95); }
           to { opacity: 1; transform: scale(1); }
         }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
+        .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
       `}</style>
     </section>
   );

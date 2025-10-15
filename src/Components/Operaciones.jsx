@@ -1,30 +1,33 @@
-
 import React, { useState, useEffect } from "react";
 
 const operaciones = [
   {
     titulo: "Exploración y Producción",
     descripcion:
-      "En el LOTE IX realizamos exploración y extracción responsable de hidrocarburos, con tecnología avanzada que garantiza eficiencia y sostenibilidad.",
+      "En el Lote IX realizamos exploración y extracción responsable de hidrocarburos, utilizando tecnología avanzada que garantiza eficiencia operativa, seguridad y sostenibilidad ambiental.",
     imagen: "Unienergia-6.jpg",
+    alt: "Operaciones de exploración y producción de hidrocarburos en el Lote IX de Unienergía Perú",
   },
   {
     titulo: "Infraestructura y Logística",
     descripcion:
-      "Contamos con equipos, ductos y plantas que cumplen con los más altos estándares de seguridad para asegurar la continuidad de las operaciones.",
+      "Contamos con ductos, plantas y equipos de alta tecnología que cumplen los más altos estándares internacionales de seguridad, asegurando la continuidad y eficiencia de nuestras operaciones energéticas.",
     imagen: "Unienergia-32.jpg",
+    alt: "Infraestructura energética moderna y logística de transporte de Unienergía",
   },
   {
     titulo: "Monitoreo Ambiental",
     descripcion:
-      "Implementamos monitoreo permanente de aire, agua y suelos, asegurando el cumplimiento de normativas ambientales en todas las etapas del proceso.",
+      "Implementamos un monitoreo continuo de aire, agua y suelos en todas las etapas del proceso, garantizando el cumplimiento de las normativas ambientales y el respeto por el entorno natural.",
     imagen: "Unienergia-16.jpg",
+    alt: "Monitoreo ambiental de aire y agua en operaciones del Lote IX Unienergía Perú",
   },
   {
     titulo: "Apoyo Comunitario",
     descripcion:
-      "Colaboramos con las familias del entorno del Lote IX a través de programas sociales, educación ambiental y campañas de salud.",
+      "Desarrollamos programas sociales y educativos en comunidades cercanas al Lote IX, fortaleciendo la educación ambiental, la salud y el bienestar social.",
     imagen: "Unienergia-49.jpg",
+    alt: "Colaboración comunitaria y apoyo social de Unienergía en el Lote IX",
   },
 ];
 
@@ -35,7 +38,9 @@ export default function Operaciones() {
   ];
 
   const [typed, setTyped] = useState("");
+  const [activo, setActivo] = useState(0);
 
+  // Efecto de escritura
   useEffect(() => {
     let txt = "";
     let isDeleting = false;
@@ -65,13 +70,21 @@ export default function Operaciones() {
     return () => clearTimeout(timer);
   }, []);
 
-  const [activo, setActivo] = useState(0);
-
   return (
     <section
       id="operaciones"
       className="relative py-20 bg-gradient-to-b from-white via-gray-100 to-gray-200 text-gray-900 overflow-hidden"
+      aria-labelledby="titulo-operaciones"
     >
+      {/* 
+        SEO SUGERIDO (para Helmet o Next.js):
+        <Helmet>
+          <title>Operaciones Lote IX | UNIENERGÍA Perú</title>
+          <meta name="description" content="Conoce las operaciones de UNIENERGÍA en el Lote IX: exploración y producción responsable de hidrocarburos, infraestructura segura, monitoreo ambiental y apoyo comunitario en Perú." />
+          <meta name="keywords" content="Unienergía, Lote IX, hidrocarburos, energía sostenible, exploración petrolera, monitoreo ambiental, infraestructura energética, Perú" />
+        </Helmet>
+      */}
+
       <style>{`
         @keyframes blinkCaret {
           0%, 100% { opacity: 1; }
@@ -84,7 +97,6 @@ export default function Operaciones() {
           margin-left: 6px;
           animation: blinkCaret 1s steps(1) infinite;
         }
-        /* Ocultar barra de desplazamiento */
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
@@ -95,29 +107,46 @@ export default function Operaciones() {
       `}</style>
 
       {/* Encabezado */}
-      <div className="text-center mb-14 px-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B2C61]">
-          OPERACIONES LOTE IX
+      <header className="text-center mb-14 px-6">
+        <h2
+          id="titulo-operaciones"
+          className="text-4xl md:text-5xl font-extrabold text-[#0B2C61]"
+        >
+          Operaciones en el Lote IX
         </h2>
-        <p className="mt-4 text-lg max-w-3xl mx-auto text-gray-700 font-medium">
+
+        <p
+          className="mt-4 text-lg max-w-3xl mx-auto text-gray-700 font-medium"
+          aria-label="Frase principal animada"
+        >
           <span>{typed}</span>
           <span className="type-caret" />
         </p>
+
         <p className="mt-6 max-w-3xl mx-auto text-gray-600 text-base md:text-lg leading-relaxed">
-          En UNIENERGÍA desarrollamos actividades integrales en el Lote IX,
-          combinando ingeniería avanzada con responsabilidad ambiental y social.
-          Cada operación refleja nuestro compromiso con la sostenibilidad, la
-          seguridad y el bienestar de las comunidades locales.
+          En <strong>UNIENERGÍA</strong> desarrollamos operaciones integrales en el{" "}
+          <strong>Lote IX</strong>, combinando innovación tecnológica,
+          sostenibilidad ambiental y compromiso social. Cada actividad refleja
+          nuestra misión de contribuir al desarrollo energético responsable del
+          Perú.
         </p>
-      </div>
+      </header>
 
       {/* Carrusel horizontal sin barra visible */}
       <div className="max-w-7xl mx-auto px-6 overflow-x-auto scrollbar-hide">
-        <div className="flex gap-4 w-max">
+        <div
+          className="flex gap-4 w-max"
+          role="list"
+          aria-label="Galería de operaciones energéticas"
+        >
           {operaciones.map((op, index) => (
-            <div
+            <article
               key={index}
               onClick={() => setActivo(index)}
+              tabIndex={0}
+              role="button"
+              aria-pressed={activo === index}
+              aria-label={`Ver detalles de ${op.titulo}`}
               className={`relative overflow-hidden rounded-2xl cursor-pointer shadow-lg flex-shrink-0 transition-all duration-700 ease-in-out ${
                 activo === index
                   ? "w-[600px] h-[420px]"
@@ -152,11 +181,10 @@ export default function Operaciones() {
                   </p>
                 )}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
     </section>
   );
 }
-

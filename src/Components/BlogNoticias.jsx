@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const BlogNoticias = () => {
   const [noticiaSeleccionada, setNoticiaSeleccionada] = useState(null);
@@ -6,65 +7,74 @@ const BlogNoticias = () => {
   const noticias = [
     {
       id: 1,
-      titulo: "MEIA",
+      titulo: "MEIA: Transición Energética en UNIENERGÍA",
       fecha: "9 de octubre de 2025",
       resumen:
-        "Unienergia inicia un nuevo programa de transición energética, impulsando proyectos basados en recursos renovables y eficiencia industrial.",
+        "UNIENERGÍA inicia un nuevo programa de transición energética basado en recursos renovables y eficiencia industrial.",
       contenido:
-        "Unienergia ha anunciado la puesta en marcha de nuevos proyectos enfocados en energía limpia, priorizando la innovación tecnológica y la sostenibilidad ambiental. Estos proyectos buscan optimizar los procesos energéticos y reducir la huella de carbono en las operaciones de la empresa, en línea con su compromiso de responsabilidad social y ambiental.",
+        "UNIENERGÍA ha anunciado nuevos proyectos enfocados en energía limpia, priorizando innovación tecnológica y sostenibilidad ambiental. Estos buscan reducir la huella de carbono y optimizar los procesos energéticos, reafirmando su compromiso con la responsabilidad social y ambiental.",
       imagen: "/fumigacion.jpeg",
     },
     {
       id: 2,
-      titulo: "WORKOVER",
+      titulo: "WORKOVER: Expansión Regional",
       fecha: "1 de octubre de 2025",
       resumen:
         "La compañía amplía su presencia regional, fortaleciendo su red logística y alianzas estratégicas en varios países.",
       contenido:
-        "Con la finalidad de fortalecer su liderazgo en el sector energético, Unienergia anuncia la expansión de sus operaciones hacia nuevos mercados latinoamericanos. Este crecimiento permitirá optimizar la cadena de suministro y consolidar su capacidad operativa, brindando soluciones energéticas más eficientes a nivel continental.",
+        "UNIENERGÍA expande sus operaciones a nuevos mercados latinoamericanos, consolidando su liderazgo en el sector energético. Este crecimiento optimiza la cadena de suministro y fortalece la capacidad operativa de la empresa.",
       imagen: "/Unienergia-70.jpg",
     },
     {
       id: 3,
-      titulo: "PERFORACION",
+      titulo: "PERFORACIÓN Inteligente",
       fecha: "25 de septiembre de 2025",
       resumen:
-        "Se implementan nuevas tecnologías para la optimización de procesos en exploración y perforación.",
+        "UNIENERGÍA aplica inteligencia artificial para optimizar procesos de exploración y perforación.",
       contenido:
-        "Unienergia continúa su apuesta por la innovación, aplicando herramientas de inteligencia artificial y automatización en sus operaciones petroleras. Estas tecnologías mejoran la seguridad, reducen costos y aumentan la productividad, asegurando una gestión más eficiente y moderna en todos sus proyectos.",
+        "La empresa implementa IA y automatización para mejorar seguridad, reducir costos y aumentar productividad, garantizando operaciones más sostenibles e innovadoras.",
       imagen: "/Unienergia-71.jpg",
     },
     {
       id: 4,
-      titulo: "CAPACITACIONES",
-      fecha: "25 de septiembre de 2025",
+      titulo: "Capacitaciones Técnicas",
+      fecha: "20 de septiembre de 2025",
       resumen:
-        "Se implementan nuevas tecnologías para la optimización de procesos en exploración y perforación.",
+        "UNIENERGÍA impulsa la formación continua del personal en seguridad, innovación y eficiencia energética.",
       contenido:
-        "Unienergia continúa su apuesta por la innovación, aplicando herramientas de inteligencia artificial y automatización en sus operaciones petroleras. Estas tecnologías mejoran la seguridad, reducen costos y aumentan la productividad, asegurando una gestión más eficiente y moderna en todos sus proyectos.",
+        "El programa de capacitación busca fortalecer las competencias técnicas de los trabajadores, fomentando una cultura de mejora continua en toda la organización.",
       imagen: "/capa.jpg",
     },
-    {
-      id: 5,
-      titulo: "NUEVAS TECNOLOGIAS",
-      fecha: "25 de septiembre de 2025",
+     {
+      id: 4,
+      titulo: "Capacitaciones Técnicas",
+      fecha: "20 de septiembre de 2025",
       resumen:
-        "Se implementan nuevas tecnologías para la optimización de procesos en exploración y perforación.",
+        "UNIENERGÍA impulsa la formación continua del personal en seguridad, innovación y eficiencia energética.",
       contenido:
-        "Unienergia continúa su apuesta por la innovación, aplicando herramientas de inteligencia artificial y automatización en sus operaciones petroleras. Estas tecnologías mejoran la seguridad, reducen costos y aumentan la productividad, asegurando una gestión más eficiente y moderna en todos sus proyectos.",
-      imagen: "/Unienergia-71.jpg",
+        "El programa de capacitación busca fortalecer las competencias técnicas de los trabajadores, fomentando una cultura de mejora continua en toda la organización.",
+      imagen: "/capa.jpg",
     },
-    
+     {
+      id: 4,
+      titulo: "Capacitaciones Técnicas",
+      fecha: "20 de septiembre de 2025",
+      resumen:
+        "UNIENERGÍA impulsa la formación continua del personal en seguridad, innovación y eficiencia energética.",
+      contenido:
+        "El programa de capacitación busca fortalecer las competencias técnicas de los trabajadores, fomentando una cultura de mejora continua en toda la organización.",
+      imagen: "/capa.jpg",
+    },
   ];
 
   const abrirModal = (noticia) => {
     setNoticiaSeleccionada(noticia);
-    document.body.style.overflow = "hidden"; // Evita scroll de fondo
+    document.body.style.overflow = "hidden";
   };
 
   const cerrarModal = () => {
     setNoticiaSeleccionada(null);
-    document.body.style.overflow = "auto"; // Restaura scroll
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -72,32 +82,61 @@ const BlogNoticias = () => {
       id="blog"
       className="relative py-20 bg-gradient-to-r from-[#0B2C61] via-[#0A1B3C] to-[#020617] text-white overflow-hidden mb-10"
     >
-      <div className="relative z-10 max-w-6xl mx-auto px-6 mb-10">
-        <h2 className="text-7xl md:text-6xl font-bold text-center mb-10 text-gray-300  leading-[1.15] pb-3">
-          Blog de Noticias
-        </h2>
-         <p className="text-2xl text-gray-400 mb-6 text-center px-6 mx-auto mb-20">
-              Apoyamos activamente a las 11 familias del Lote IX, mediante
-              iniciativas que mejoran su calidad de vida y fortalecen el vínculo
-              comunitario.
-        </p>
-        
+      {/* SEO */}
+      <Helmet>
+        <title>Blog de Noticias | UNIENERGÍA</title>
+        <meta
+          name="description"
+          content="Noticias y actualizaciones sobre energía, sostenibilidad, innovación tecnológica y responsabilidad social en UNIENERGÍA."
+        />
+        <meta
+          name="keywords"
+          content="energía, sostenibilidad, petróleo, innovación, UNIENERGÍA, noticias energéticas, tecnología"
+        />
+        <meta property="og:title" content="Blog de Noticias | UNIENERGÍA" />
+        <meta
+          property="og:description"
+          content="Mantente informado sobre los proyectos energéticos, ambientales y sociales de UNIENERGÍA."
+        />
+        <meta property="og:image" content="/Unienergia-71.jpg" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.tu-dominio.com/blog-noticias"
+        />
+      </Helmet>
 
-        {/* Tarjetas estilo glass */}
-        <div className="grid md:grid-cols-3 gap-10">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 mb-10">
+        <header className="text-center mb-20">
+          <h1 className="text-5xl md:text-6xl font-bold text-center mb-10 text-gray-100 leading-[1.15] pb-3">
+            Blog de Noticias
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Conoce las últimas novedades, proyectos e iniciativas de UNIENERGÍA
+            en el sector energético, social y ambiental.
+          </p>
+        </header>
+
+        {/* Listado de Noticias */}
+        <main className="grid md:grid-cols-3 gap-10" aria-label="Noticias recientes">
           {noticias.map((noticia) => (
-            <div
+            <article
               key={noticia.id}
               className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-6 
                          hover:scale-[1.03] hover:bg-white/15 transition-all duration-300"
             >
-              <img
-                src={noticia.imagen}
-                alt={noticia.titulo}
-                className="w-full h-48 object-cover rounded-xl mb-4"
-              />
-              <h3 className="text-2xl font-bold mb-2">{noticia.titulo}</h3>
-              <p className="text-sm text-gray-300 mb-2">{noticia.fecha}</p>
+              <figure>
+                <img
+                  src={noticia.imagen}
+                  alt={`Imagen de ${noticia.titulo}`}
+                  className="w-full h-48 object-cover rounded-xl mb-4"
+                  loading="lazy"
+                />
+              </figure>
+              <h2 className="text-2xl font-bold mb-2">{noticia.titulo}</h2>
+              <time className="text-sm text-gray-300 block mb-2">
+                {noticia.fecha}
+              </time>
               <p className="text-gray-200 mb-4">{noticia.resumen}</p>
               <button
                 onClick={() => abrirModal(noticia)}
@@ -106,18 +145,18 @@ const BlogNoticias = () => {
               >
                 Leer más
               </button>
-            </div>
+            </article>
           ))}
-        </div>
+        </main>
       </div>
 
-      {/* Modal */}
+      {/* Modal Detalle Noticia */}
       {noticiaSeleccionada && (
         <div
           className="fixed inset-0 flex items-center justify-center z-50 backdrop-blur-md bg-black/50"
           onClick={cerrarModal}
         >
-          <div
+          <article
             className="relative bg-white/10 backdrop-blur-xl border border-white/20 text-white 
                        max-w-3xl mx-4 rounded-2xl shadow-2xl p-8 animate-fadeIn"
             onClick={(e) => e.stopPropagation()}
@@ -125,42 +164,38 @@ const BlogNoticias = () => {
             <button
               onClick={cerrarModal}
               className="absolute top-3 right-3 text-gray-300 hover:text-white text-2xl"
+              aria-label="Cerrar noticia"
             >
               ✕
             </button>
-            <img
-              src={noticiaSeleccionada.imagen}
-              alt={noticiaSeleccionada.titulo}
-              className="w-full h-64 object-cover rounded-xl mb-4"
-            />
-            <h3 className="text-3xl font-bold mb-2 text-[#4CA23C]">
+            <figure>
+              <img
+                src={noticiaSeleccionada.imagen}
+                alt={noticiaSeleccionada.titulo}
+                className="w-full h-64 object-cover rounded-xl mb-4"
+                loading="lazy"
+              />
+            </figure>
+            <h2 className="text-3xl font-bold mb-2 text-[#4CA23C]">
               {noticiaSeleccionada.titulo}
-            </h3>
-            <p className="text-sm text-gray-300 mb-4">
+            </h2>
+            <time className="text-sm text-gray-300 block mb-4">
               {noticiaSeleccionada.fecha}
-            </p>
+            </time>
             <p className="text-gray-200 leading-relaxed">
               {noticiaSeleccionada.contenido}
             </p>
-          </div>
+          </article>
         </div>
       )}
 
-      {/* Efecto de entrada */}
+      {/* Animación */}
       <style>{`
         @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
+          from { opacity: 0; transform: scale(0.95); }
+          to { opacity: 1; transform: scale(1); }
         }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
+        .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
       `}</style>
     </section>
   );

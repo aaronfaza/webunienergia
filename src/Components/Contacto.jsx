@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import emailjs from "@emailjs/browser"; // npm install @emailjs/browser
+import emailjs from "@emailjs/browser";
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -42,18 +42,80 @@ export default function Contacto() {
       id="contacto"
       className="relative py-20 bg-gradient-to-r from-[#E6D9AA]/20 via-white to-[#E6D9AA]/20 text-gray-900 overflow-hidden"
     >
-      {/* Título principal */}
+      {/* === SEO TAGS === */}
+      <Helmet>
+        <title>Contáctanos | Unienergía</title>
+        <meta
+          name="description"
+          content="Ponte en contacto con Unienergía para recibir asesoría sobre energía, proyectos petroleros o soluciones sostenibles. Estamos listos para ayudarte."
+        />
+        <meta
+          name="keywords"
+          content="contacto Unienergía, energía, petróleo, sostenibilidad, proyectos industriales, asesoría energética"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.unienergia.com/contacto" />
+
+        {/* === Open Graph === */}
+        <meta property="og:title" content="Contáctanos | Unienergía" />
+        <meta
+          property="og:description"
+          content="Comunícate con Unienergía para conocer más sobre nuestros servicios energéticos y proyectos industriales."
+        />
+        <meta property="og:image" content="/Unienergia-59.jpg" />
+        <meta property="og:url" content="https://www.unienergia.com/contacto" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_PE" />
+
+        {/* === Twitter Card === */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contáctanos | Unienergía" />
+        <meta
+          name="twitter:description"
+          content="Estamos aquí para resolver tus dudas y trabajar contigo en soluciones energéticas sostenibles."
+        />
+        <meta name="twitter:image" content="/Unienergia-59.jpg" />
+
+        {/* === Schema.org === */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Unienergía",
+            url: "https://www.unienergia.com",
+            logo: "/logo.png",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+51 987 654 321",
+              contactType: "Atención al cliente",
+              email: "contacto@unienergia.com",
+              areaServed: "PE",
+              availableLanguage: ["Español", "Inglés"],
+            },
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Av. Canaval y Moreyra 425",
+              addressLocality: "San Isidro",
+              addressRegion: "Lima",
+              postalCode: "15047",
+              addressCountry: "PE",
+            },
+          })}
+        </script>
+      </Helmet>
+
+      {/* === Título principal === */}
       <div className="text-center mb-12">
-        <h2 className="font-manrope text-4xl md:text-5xl font-extrabold text-[#711610]">
+        <h1 className="font-manrope text-4xl md:text-5xl font-extrabold text-[#711610]">
           Contáctanos
-        </h2>
+        </h1>
         <p className="mt-4 font-opensans text-[#9A999D] max-w-xl mx-auto">
           Estamos aquí para responder tus consultas, escuchar tus ideas y
           construir soluciones energéticas contigo.
         </p>
       </div>
 
-      {/* Contenedor principal */}
+      {/* === Contenido principal === */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 lg:px-12">
         {/* Información de contacto */}
         <motion.div
@@ -63,40 +125,43 @@ export default function Contacto() {
           viewport={{ once: true }}
           className="space-y-8"
         >
+          {/* Correo */}
           <div className="flex items-center gap-4">
             <div className="p-4 rounded-full bg-[#0033A0] shadow-lg">
               <Mail className="text-white" />
             </div>
             <div>
-              <h4 className="font-manrope font-semibold text-lg text-[#000000]">
-                Correo
-              </h4>
+              <h2 className="font-manrope font-semibold text-lg text-[#000000]">
+                Correo electrónico
+              </h2>
               <p className="font-opensans text-[#9A999D]">
                 contacto@unienergia.com
               </p>
             </div>
           </div>
 
+          {/* Teléfono */}
           <div className="flex items-center gap-4">
             <div className="p-4 rounded-full bg-[#711610] shadow-lg">
               <Phone className="text-white" />
             </div>
             <div>
-              <h4 className="font-manrope font-semibold text-lg text-[#000000]">
+              <h2 className="font-manrope font-semibold text-lg text-[#000000]">
                 Teléfono
-              </h4>
+              </h2>
               <p className="font-opensans text-[#9A999D]">+51 987 654 321</p>
             </div>
           </div>
 
+          {/* Ubicación */}
           <div className="flex items-center gap-4">
             <div className="p-4 rounded-full bg-[#4CA23C] shadow-lg">
               <MapPin className="text-white" />
             </div>
             <div>
-              <h4 className="font-manrope font-semibold text-lg text-[#000000]">
+              <h2 className="font-manrope font-semibold text-lg text-[#000000]">
                 Ubicación
-              </h4>
+              </h2>
               <p className="font-opensans text-[#9A999D]">
                 Av. Canaval y Moreyra 425, San Isidro 15047
               </p>
@@ -112,12 +177,17 @@ export default function Contacto() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="bg-white p-8 rounded-2xl shadow-xl space-y-6 border border-[#E6D9AA]/40"
+          aria-label="Formulario de contacto de Unienergía"
         >
           <div>
-            <label className="block text-sm mb-2 font-manrope text-[#711610]">
+            <label
+              htmlFor="nombre"
+              className="block text-sm mb-2 font-manrope text-[#711610]"
+            >
               Nombre
             </label>
             <input
+              id="nombre"
               type="text"
               name="nombre"
               value={formData.nombre}
@@ -128,10 +198,14 @@ export default function Contacto() {
           </div>
 
           <div>
-            <label className="block text-sm mb-2 font-manrope text-[#0033A0]">
+            <label
+              htmlFor="email"
+              className="block text-sm mb-2 font-manrope text-[#0033A0]"
+            >
               Correo electrónico
             </label>
             <input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
@@ -142,10 +216,14 @@ export default function Contacto() {
           </div>
 
           <div>
-            <label className="block text-sm mb-2 font-manrope text-[#4CA23C]">
+            <label
+              htmlFor="mensaje"
+              className="block text-sm mb-2 font-manrope text-[#4CA23C]"
+            >
               Mensaje
             </label>
             <textarea
+              id="mensaje"
               name="mensaje"
               value={formData.mensaje}
               onChange={handleChange}
@@ -178,4 +256,3 @@ export default function Contacto() {
     </section>
   );
 }
-
