@@ -3,10 +3,10 @@ import { ChevronRight } from "lucide-react";
 
 export default function Hero() {
   const images = [
-    "/Unienergia-32.jpg",
-    "/Unienergia-32.jpg",
-    "/Unienergia-75.jpg",
-    "/Unienergia-68.jpg",
+    "/Unienergia-59.jpg",
+    "/Unienergia-76.jpg",
+    "/Unienergia-28.jpg",
+    "/Unienergia-26.jpg",
   ];
 
   const [current, setCurrent] = useState(0);

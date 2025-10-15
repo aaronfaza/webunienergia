@@ -33,13 +33,13 @@ const actividades = {
       titulo: "Atención médica",
       descripcion:
         "Brindamos jornadas de salud y atención médica gratuita para los pobladores cercanos a nuestras operaciones.",
-      imagen: "/medica.jpg",
+      imagen: "/medica.jpeg",
     },
     {
       titulo: "Fumigación preventiva",
       descripcion:
         "Ejecutamos fumigaciones preventivas para controlar la proliferación de plagas y enfermedades vectoriales.",
-      imagen: "/fumigacion.jpg",
+      imagen: "/fumigacion.jpeg",
     },
   ],
 };

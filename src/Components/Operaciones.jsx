@@ -6,7 +6,7 @@ const operaciones = [
     titulo: "Exploración y Producción",
     descripcion:
       "En el LOTE IX realizamos exploración y extracción responsable de hidrocarburos, con tecnología avanzada que garantiza eficiencia y sostenibilidad.",
-    imagen: "Unienergia-x.jpg",
+    imagen: "Unienergia-6.jpg",
   },
   {
     titulo: "Infraestructura y Logística",

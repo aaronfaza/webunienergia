@@ -12,7 +12,7 @@ const BlogNoticias = () => {
         "Unienergia inicia un nuevo programa de transición energética, impulsando proyectos basados en recursos renovables y eficiencia industrial.",
       contenido:
         "Unienergia ha anunciado la puesta en marcha de nuevos proyectos enfocados en energía limpia, priorizando la innovación tecnológica y la sostenibilidad ambiental. Estos proyectos buscan optimizar los procesos energéticos y reducir la huella de carbono en las operaciones de la empresa, en línea con su compromiso de responsabilidad social y ambiental.",
-      imagen: "/Unienergia-68.jpg",
+      imagen: "/fumigacion.jpeg",
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const BlogNoticias = () => {
         "Se implementan nuevas tecnologías para la optimización de procesos en exploración y perforación.",
       contenido:
         "Unienergia continúa su apuesta por la innovación, aplicando herramientas de inteligencia artificial y automatización en sus operaciones petroleras. Estas tecnologías mejoran la seguridad, reducen costos y aumentan la productividad, asegurando una gestión más eficiente y moderna en todos sus proyectos.",
-      imgen: "/Unienergia-71.jpg",
+      imgen: "/capa.jpg",
     },
     {
       id: 5,
