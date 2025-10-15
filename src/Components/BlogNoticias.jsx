@@ -42,7 +42,7 @@ const BlogNoticias = () => {
         "Se implementan nuevas tecnologías para la optimización de procesos en exploración y perforación.",
       contenido:
         "Unienergia continúa su apuesta por la innovación, aplicando herramientas de inteligencia artificial y automatización en sus operaciones petroleras. Estas tecnologías mejoran la seguridad, reducen costos y aumentan la productividad, asegurando una gestión más eficiente y moderna en todos sus proyectos.",
-      imgen: "/capa.jpg",
+      imagen: "/capa.jpg",
     },
     {
       id: 5,

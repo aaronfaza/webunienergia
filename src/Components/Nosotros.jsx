@@ -70,7 +70,7 @@ return ( <section
       {/* Imagen */}
       <div className="relative w-full max-w-xl group">
         <img
-          src="/un.jpg"
+          src="/Unienergia-45.jpg"
           alt="Nuestro equipo"
           className="w-full rounded-2xl shadow-2xl transform group-hover:scale-105 group-hover:brightness-105 transition duration-500"
         />

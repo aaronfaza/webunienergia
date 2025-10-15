@@ -12,19 +12,19 @@ const operaciones = [
     titulo: "Infraestructura y Logística",
     descripcion:
       "Contamos con equipos, ductos y plantas que cumplen con los más altos estándares de seguridad para asegurar la continuidad de las operaciones.",
-    imagen: "Unienergia-x.jpg",
+    imagen: "Unienergia-32.jpg",
   },
   {
     titulo: "Monitoreo Ambiental",
     descripcion:
       "Implementamos monitoreo permanente de aire, agua y suelos, asegurando el cumplimiento de normativas ambientales en todas las etapas del proceso.",
-    imagen: "Unienergia-x.jpg",
+    imagen: "Unienergia-16.jpg",
   },
   {
     titulo: "Apoyo Comunitario",
     descripcion:
       "Colaboramos con las familias del entorno del Lote IX a través de programas sociales, educación ambiental y campañas de salud.",
-    imagen: "Unienergia-x.jpg",
+    imagen: "Unienergia-49.jpg",
   },
 ];
 

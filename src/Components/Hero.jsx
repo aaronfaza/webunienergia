@@ -29,8 +29,8 @@ export default function Hero() {
       {/* CARRUSEL DE IMÁGENES */}
       <div className="relative w-full md:w-1/2 flex justify-center items-center py-20 md:py-0">
         <div
-          className="relative w-80 h-80 sm:w-[28rem] sm:h-[28rem] rounded-full overflow-hidden 
-                     shadow-[0_0_40px_rgba(76,162,60,0.4)] border-8 border-white/30 transition-all duration-500"
+          className="relative w-100 h-100 sm:w-[50rem] sm:h-[28rem] rounded-full overflow-hidden 
+                     shadow-[0_0_40px_rgba(76,162,60,0.4)] border-6 border-white/30 transition-all duration-600"
         >
           {images.map((src, i) => (
             <img
@@ -65,7 +65,7 @@ export default function Hero() {
         </h4>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-          Soluciones Energéticas <br />
+          Empresa de Recursos Energeticos <br />
           <span className="text-[#1E40AF]">
             <span className="typing-text">UNIENERGIA ABC</span>
           </span>
