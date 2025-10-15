@@ -44,7 +44,7 @@ export default function Contacto() {
     >
       {/* === SEO TAGS === */}
       <Helmet>
-        <title>Contacto - Unienergia | Energía y Servicios Petroleros</title>
+        <title>Unienergia | Energía y Servicios Petroleros</title>
       </Helmet>
 
       {/* === Título principal === */}
