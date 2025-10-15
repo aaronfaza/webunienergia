@@ -77,7 +77,7 @@ export default function Responsabilidad() {
         />
         <meta property="og:image" content="/aire.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.unienergia.pe/responsabilidad" />
+        <meta property="og:url" content="https://www.tu-dominio.com/responsabilidad" />
       </Helmet>
 
       <div
