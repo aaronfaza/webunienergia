@@ -28,7 +28,10 @@ export default function Hero() {
     >
       {/* CARRUSEL DE IMÁGENES */}
       <div className="relative w-full md:w-1/2 flex justify-center items-center py-20 md:py-0">
-        <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white/10">
+        <div
+          className="relative w-80 h-80 sm:w-[28rem] sm:h-[28rem] rounded-full overflow-hidden 
+                     shadow-[0_0_40px_rgba(76,162,60,0.4)] border-8 border-white/30 transition-all duration-500"
+        >
           {images.map((src, i) => (
             <img
               key={i}
@@ -42,12 +45,12 @@ export default function Hero() {
         </div>
 
         {/* Indicadores de navegación */}
-        <div className="absolute bottom-6 flex gap-2">
+        <div className="absolute bottom-8 flex gap-3">
           {images.map((_, i) => (
             <span
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+              className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
                 i === current ? "bg-white" : "bg-white/40 hover:bg-white/70"
               }`}
             />
@@ -92,7 +95,7 @@ export default function Hero() {
       </div>
 
       {/* DEGRADADO DECORATIVO */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0B2C61]/90 via-[#0A1B3C]/70 to-transparent z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0B2C61]/80 via-[#0A1B3C]/60 to-transparent z-0"></div>
 
       {/* Estilos del texto con efecto de escritura */}
       <style>{`
