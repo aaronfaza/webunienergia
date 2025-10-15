@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 export default function Nosotros() {
   return (
@@ -8,7 +9,7 @@ export default function Nosotros() {
       className="relative py-24 bg-gray-100 text-gray-900 overflow-hidden"
       aria-labelledby="titulo-nosotros"
     >
-  
+      
         <Helmet>
           <title>Sobre Nosotros | UNIENERGÍA Perú</title>
           <meta name="description" content="Conoce a UNIENERGÍA, empresa de la Universidad Nacional de Ingeniería dedicada al desarrollo de proyectos energéticos sostenibles e innovadores en Perú." />

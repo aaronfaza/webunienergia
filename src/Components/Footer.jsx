@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function Footer() {
   return (

@@ -1,5 +1,6 @@
 import React, { useState, memo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const servicios = [
   {
