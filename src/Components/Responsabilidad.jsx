@@ -65,7 +65,7 @@ export default function Responsabilidad() {
       >
         {/* Título principal */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0075A0] to-[#0033A0] leading-[1.15] pb-3">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0075A0] to-[#0033A0] leading-[1.15] pb-3">
             Responsabilidad Social y Ambiental
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
