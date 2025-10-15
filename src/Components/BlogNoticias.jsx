@@ -84,7 +84,7 @@ const BlogNoticias = () => {
     >
       {/* SEO */}
       <Helmet>
-        <title>UNIENERGÍA</title>
+        <title>Blog De noticias</title>
         <meta
           name="description"
           content="Noticias y actualizaciones sobre energía, sostenibilidad, innovación tecnológica y responsabilidad social en UNIENERGÍA."

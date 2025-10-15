@@ -8,14 +8,13 @@ export default function Nosotros() {
       className="relative py-24 bg-gray-100 text-gray-900 overflow-hidden"
       aria-labelledby="titulo-nosotros"
     >
-      {/* 
-        SEO SUGERIDO (para Next.js o React Helmet):
+  
         <Helmet>
           <title>Sobre Nosotros | UNIENERGÍA Perú</title>
           <meta name="description" content="Conoce a UNIENERGÍA, empresa de la Universidad Nacional de Ingeniería dedicada al desarrollo de proyectos energéticos sostenibles e innovadores en Perú." />
           <meta name="keywords" content="energía sostenible, energía renovable, unienergia, universidad nacional de ingeniería, energía solar, energía eólica, innovación energética, Perú" />
         </Helmet>
-      */}
+      
 
       {/* Líneas decorativas */}
       <div className="absolute inset-0 pointer-events-none">

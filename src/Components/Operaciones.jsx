@@ -76,14 +76,14 @@ export default function Operaciones() {
       className="relative py-20 bg-gradient-to-b from-white via-gray-100 to-gray-200 text-gray-900 overflow-hidden"
       aria-labelledby="titulo-operaciones"
     >
-      {/* 
-        SEO SUGERIDO (para Helmet o Next.js):
+    
+
         <Helmet>
           <title>Operaciones Lote IX | UNIENERGÍA Perú</title>
           <meta name="description" content="Conoce las operaciones de UNIENERGÍA en el Lote IX: exploración y producción responsable de hidrocarburos, infraestructura segura, monitoreo ambiental y apoyo comunitario en Perú." />
           <meta name="keywords" content="Unienergía, Lote IX, hidrocarburos, energía sostenible, exploración petrolera, monitoreo ambiental, infraestructura energética, Perú" />
         </Helmet>
-      */}
+     
 
       <style>{`
         @keyframes blinkCaret {
