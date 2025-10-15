@@ -20,9 +20,10 @@ export default function Contacto() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = "service_5d02bls";
-    const templateID = "template_imjt47v";
-    const publicKey = "e5QKiKOWlzgD6jaSb";
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 
     emailjs
       .send(serviceID, templateID, formData, publicKey)
