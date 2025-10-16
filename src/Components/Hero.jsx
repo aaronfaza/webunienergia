@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 const Hero = memo(() => {
   const images = [
     { src: "/Unienergia-59.jpg", alt: "Planta energética sostenible" },
-    { src: "/Unienergia-76.jpg", alt: "Ingenieros trabajando en proyectos energéticos" },
+    { src: "/Unienergia-62.jpg", alt: "Ingenieros trabajando en proyectos energéticos" },
     { src: "/Unienergia-28.jpg", alt: "Infraestructura energética moderna" },
     { src: "/Unienergia-26.jpg", alt: "Energía limpia y sostenible" },
   ];
