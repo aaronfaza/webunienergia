@@ -17,27 +17,12 @@ function App() {
     <HelmetProvider>
        <Helmet>
          
-          <title>Unienergia | Energía y Servicios Petroleros</title>
-          <meta
-            name="description"
-            content="Unienergia ofrece soluciones energéticas integrales, servicios petroleros, y compromiso con el desarrollo sostenible."
-          />
-          <meta
-            name="keywords"
-            content="energía, petróleo, servicios petroleros, sostenibilidad, Unienergia"
-          />
-          <meta name="author" content="Unienergia" />
-          <link rel="canonical" href="https://www.unienergia.pe/" />
-
-          {/* 🔸 Open Graph (para Facebook, LinkedIn, etc.) */}
-          <meta property="og:title" content="Unienergia | Energía y Servicios Petroleros" />
-          <meta
-            property="og:description"
-            content="Soluciones integrales en energía y servicios petroleros. Conoce más sobre Unienergia."
-          />
-          <meta property="og:image" content="https://www.unienergia.pe/og-image.jpg" />
-          <meta property="og:url" content="https://www.unienergia.pe/" />
-          <meta property="og:type" content="website" />
+           <title>Unienergia: Inicio</title>
+            <meta
+              name="description"
+              content="UNIENERGÍA, empresa vinculada a la Universidad Nacional de Ingeniería (UNI), impulsa proyectos energéticos responsables, sostenibles e innovadores. Integrando energías eficientes y soluciones innovadoras."
+            />
+            <link rel="canonical" href="https://www.unienergia.pe" />
 
           {/* 🔸 Google Analytics 4 */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-FENH2BMHGQ"></script>

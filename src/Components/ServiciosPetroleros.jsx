@@ -7,14 +7,14 @@ const servicios = [
     titulo: "Well Testing",
     descripcion:
       "Consiste en la adquisición y análisis de información de presión y producción del pozo (aperturas y cierres) a condiciones controladas según los objetivos planteados",
-    imagen: "/Unienergia-72.jpg",
+    imagen: "/well.jpeg",
     alt: "WELL TESTING",
   },
   {
     titulo: "SLICKLINE",
     descripcion:
       "Servicio que consiste en instalar y recuperar herramientas y/o dispositivos en los pozos por medio de un cable de acero diseñado para soportar esfuerzos de tensión y torsión.",
-    imagen: "/Unienergia-71.jpg",
+    imagen: "/line.jpg",
     alt: "SLICKLINE",
   },
   {
@@ -28,7 +28,7 @@ const servicios = [
     titulo: "MEDICIONES FISICAS",
     descripcion:
       "Metodología utilizada para optimizar el funcionamiento del sistema de extracción de un pozo.",
-    imagen: "/servicio-transporte.jpg",
+    imagen: "/mediciones.jpeg",
     alt: "MEDICIONES FISICAS",
   },
   {

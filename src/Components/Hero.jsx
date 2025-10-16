@@ -49,9 +49,9 @@ const Hero = memo(() => {
           </span>
           Empresa de Recursos Energéticos{" "}
           <span
-            className="inline-block align-baseline bg-gradient-to-r from-[#4CA43C] via-[#4CA10C] to-[#4CA00C] bg-clip-text text-transparent"
+            className="inline-block align-baseline bg-gradient-to-r from-[#6CA01C] via-[#4CA23C] to-[#4CA23C] bg-clip-text text-transparent"
           >
-            UNIENERGÍA
+            UNIENERGÍA ABC
           </span>
 
         </h1>
@@ -63,7 +63,7 @@ const Hero = memo(() => {
         <div className="flex flex-col sm:flex-row gap-4 justify-start">
           <a
             href="#servicios"
-            className="px-6 py-3 bg-[#4CA23C] text-white font-semibold 
+            className="px-6 py-3 bg-[#4CA03C] text-white font-semibold 
                        rounded-full shadow-lg hover:scale-105 hover:shadow-2xl 
                        transition-all duration-300 flex items-center gap-2"
           >
