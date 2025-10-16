@@ -82,29 +82,7 @@ const BlogNoticias = () => {
       id="blog"
       className="relative py-20 bg-gradient-to-r from-[#0B2C61] via-[#0A1B3C] to-[#020617] text-white overflow-hidden mb-10"
     >
-      {/* SEO */}
-      <Helmet>
-        <title>Blog de Noticias | UNIENERGÍA</title>
-        <meta
-          name="description"
-          content="Noticias y actualizaciones sobre energía, sostenibilidad, innovación tecnológica y responsabilidad social en UNIENERGÍA."
-        />
-        <meta
-          name="keywords"
-          content="energía, sostenibilidad, petróleo, innovación, UNIENERGÍA, noticias energéticas, tecnología"
-        />
-        <meta property="og:title" content="Blog de Noticias | UNIENERGÍA" />
-        <meta
-          property="og:description"
-          content="Mantente informado sobre los proyectos energéticos, ambientales y sociales de UNIENERGÍA."
-        />
-        <meta property="og:image" content="/Unienergia-71.jpg" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.unienergia.pe/blog"
-        />
-      </Helmet>
+     
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 mb-10">
         <header className="text-center mb-20">

@@ -42,9 +42,7 @@ export default function Contacto() {
       id="contacto"
       className="relative py-20 bg-gradient-to-r from-[#E6D9AA]/20 via-white to-[#E6D9AA]/20 text-gray-900 overflow-hidden"
     >
-      <Helmet>
-        <title>Inicio | Unienergia</title>
-      </Helmet>
+      
 
       <div className="text-center mb-12">
         <h1 className="font-manrope text-4xl md:text-5xl font-extrabold text-[#711610]">

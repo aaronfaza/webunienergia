@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+
 
 export default function Nosotros() {
   return (
@@ -10,11 +10,7 @@ export default function Nosotros() {
       aria-labelledby="titulo-nosotros"
     >
       
-        <Helmet>
-          <title>Sobre Nosotros | UNIENERGÍA Perú</title>
-          <meta name="description" content="Conoce a UNIENERGÍA, empresa de la Universidad Nacional de Ingeniería dedicada al desarrollo de proyectos energéticos sostenibles e innovadores en Perú." />
-          <meta name="keywords" content="energía sostenible, energía renovable, unienergia, universidad nacional de ingeniería, energía solar, energía eólica, innovación energética, Perú" />
-        </Helmet>
+       
       
 
       {/* Líneas decorativas */}

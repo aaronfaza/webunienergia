@@ -59,27 +59,7 @@ export default function Responsabilidad() {
       id="responsabilidad"
       className="relative py-28 bg-[#F9FAFB] text-gray-900 overflow-hidden"
     >
-      {/* SEO TAGS */}
-      <Helmet>
-        <title>Responsabilidad Social y Ambiental | UNIENERGÍA</title>
-        <meta
-          name="description"
-          content="En UNIENERGÍA reafirmamos nuestro compromiso con la sostenibilidad, el cuidado ambiental y el bienestar de las familias del Lote IX."
-        />
-        <meta
-          name="keywords"
-          content="energía, sostenibilidad, responsabilidad social, medio ambiente, petróleo, UNIENERGÍA"
-        />
-        <meta property="og:title" content="Responsabilidad Social y Ambiental | UNIENERGÍA" />
-        <meta
-          property="og:description"
-          content="Comprometidos con la protección ambiental y el desarrollo social sostenible en el Lote IX."
-        />
-        <meta property="og:image" content="/aire.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.tu-dominio.com/responsabilidad" />
-      </Helmet>
-
+     
       <div
         className={`max-w-7xl mx-auto px-6 lg:px-12 transition-all duration-300 ${
           modal ? "blur-md" : ""

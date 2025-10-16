@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+
 
 const operaciones = [
   {
@@ -78,13 +78,6 @@ export default function Operaciones() {
       aria-labelledby="titulo-operaciones"
     >
     
-
-        <Helmet>
-          <title>Operaciones Lote IX | UNIENERGÍA Perú</title>
-          <meta name="description" content="Conoce las operaciones de UNIENERGÍA en el Lote IX: exploración y producción responsable de hidrocarburos, infraestructura segura, monitoreo ambiental y apoyo comunitario en Perú." />
-          <meta name="keywords" content="Unienergía, Lote IX, hidrocarburos, energía sostenible, exploración petrolera, monitoreo ambiental, infraestructura energética, Perú" />
-        </Helmet>
-     
 
       <style>{`
         @keyframes blinkCaret {
