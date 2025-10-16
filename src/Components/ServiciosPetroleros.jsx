@@ -4,39 +4,39 @@ import { Helmet } from "react-helmet-async";
 
 const servicios = [
   {
-    titulo: "Exploración",
+    titulo: "Well Testing",
     descripcion:
-      "Realizamos estudios de exploración de hidrocarburos con tecnología avanzada y métodos sísmicos para identificar yacimientos con precisión y responsabilidad ambiental.",
+      "Consiste en la adquisición y análisis de información de presión y producción del pozo (aperturas y cierres) a condiciones controladas según los objetivos planteados",
     imagen: "/Unienergia-72.jpg",
-    alt: "Exploración de hidrocarburos con tecnología sísmica",
+    alt: "WELL TESTING",
   },
   {
-    titulo: "Perforación",
+    titulo: "SLICKLINE",
     descripcion:
-      "Ofrecemos servicios completos de perforación onshore y offshore, utilizando equipos de última generación y altos estándares de seguridad industrial.",
+      "Servicio que consiste en instalar y recuperar herramientas y/o dispositivos en los pozos por medio de un cable de acero diseñado para soportar esfuerzos de tensión y torsión.",
     imagen: "/Unienergia-71.jpg",
-    alt: "Plataforma de perforación petrolera moderna",
+    alt: "SLICKLINE",
   },
   {
-    titulo: "Producción",
+    titulo: "SERVICIOS DE PIPE RECOVERY",
     descripcion:
       "Optimizamos la producción de crudo y gas mediante técnicas innovadoras y monitoreo en tiempo real para maximizar la eficiencia y reducir el impacto ambiental.",
     imagen: "/servicio-produccion.jpg",
-    alt: "Producción de hidrocarburos con sistemas automatizados",
+    alt: "SERVICIOS DE PIPE RECOVERY",
   },
   {
-    titulo: "Transporte",
+    titulo: "MEDICIONES FISICAS",
     descripcion:
-      "Desarrollamos infraestructura logística para el transporte eficiente y seguro de hidrocarburos, garantizando calidad y cumplimiento normativo.",
+      "Metodología utilizada para optimizar el funcionamiento del sistema de extracción de un pozo.",
     imagen: "/servicio-transporte.jpg",
-    alt: "Transporte de hidrocarburos mediante ductos y camiones cisterna",
+    alt: "MEDICIONES FISICAS",
   },
   {
-    titulo: "Mantenimiento",
+    titulo: "PERFILAJE Y PUNZONAMIENTO",
     descripcion:
-      "Brindamos mantenimiento preventivo y correctivo en instalaciones petroleras para garantizar la continuidad operacional y la seguridad del personal.",
+      "UNIPETRO ABC cuenta con una moderna unidad de Registro y Punzonamiento, montado sobre el chasis de un camión FREIGHTLINER modelo FL‐112.",
     imagen: "/servicio-mantenimiento.jpg",
-    alt: "Técnico realizando mantenimiento en planta petrolera",
+    alt: "PERFILAJE Y PUNZONAMIENTO",
   },
 ];
 
@@ -45,6 +45,7 @@ const clientes = [
   { logo: "/petrotal.png", nombre: "Petrotal" },
   { logo: "/petroperu.png", nombre: "Petroperú" },
   { logo: "/gtg.png", nombre: "GTG Energy" },
+  { logo: "/OLIMPIC.jpg", nombre: "Olimpic" },
 ];
 
 const ServiciosPetroleros = memo(() => {
@@ -64,9 +65,9 @@ const ServiciosPetroleros = memo(() => {
       {/* Título principal */}
       <h2
         id="servicios-heading"
-        className="text-4xl md:text-5xl font-extrabold text-center mb-6"
+        className="text-4xl md:text-5xl font-extrabold text-center mb-14 text-gray-200"
       >
-        Servicios Petroleros
+        SERVICIOS PETROLEROS
       </h2>
 
       {/* Descripción general */}
