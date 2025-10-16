@@ -87,7 +87,7 @@ const BlogNoticias = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 mb-10">
         <header className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-center mb-10 text-gray-100 leading-[1.15] pb-3">
-            Blog de Noticias
+            Blog de Noticias.
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Conoce las últimas novedades, proyectos e iniciativas de UNIENERGÍA
