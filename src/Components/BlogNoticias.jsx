@@ -1,182 +1,162 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { motion, AnimatePresence } from "framer-motion";
 
-const BlogNoticias = () => {
-  const [noticiaSeleccionada, setNoticiaSeleccionada] = useState(null);
+export default function BlogNoticias() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedPost, setSelectedPost] = useState(null);
 
-  const noticias = [
-    {
-      id: 1,
-      titulo: "MEIA: Transición Energética en UNIENERGÍA",
-      fecha: "9 de octubre de 2025",
-      resumen:
-        "UNIENERGÍA inicia un nuevo programa de transición energética basado en recursos renovables y eficiencia industrial.",
-      contenido:
-        "UNIENERGÍA ha anunciado nuevos proyectos enfocados en energía limpia, priorizando innovación tecnológica y sostenibilidad ambiental. Estos buscan reducir la huella de carbono y optimizar los procesos energéticos, reafirmando su compromiso con la responsabilidad social y ambiental.",
-      imagen: "/fumigacion.jpeg",
-    },
-    {
-      id: 2,
-      titulo: "WORKOVER: Expansión Regional",
-      fecha: "1 de octubre de 2025",
-      resumen:
-        "La compañía amplía su presencia regional, fortaleciendo su red logística y alianzas estratégicas en varios países.",
-      contenido:
-        "UNIENERGÍA expande sus operaciones a nuevos mercados latinoamericanos, consolidando su liderazgo en el sector energético. Este crecimiento optimiza la cadena de suministro y fortalece la capacidad operativa de la empresa.",
-      imagen: "/Unienergia-70.jpg",
-    },
-    {
-      id: 3,
-      titulo: "PERFORACIÓN Inteligente",
-      fecha: "25 de septiembre de 2025",
-      resumen:
-        "UNIENERGÍA aplica inteligencia artificial para optimizar procesos de exploración y perforación.",
-      contenido:
-        "La empresa implementa IA y automatización para mejorar seguridad, reducir costos y aumentar productividad, garantizando operaciones más sostenibles e innovadoras.",
-      imagen: "/Unienergia-71.jpg",
-    },
-    {
-      id: 4,
-      titulo: "Capacitaciones Técnicas",
-      fecha: "20 de septiembre de 2025",
-      resumen:
-        "UNIENERGÍA impulsa la formación continua del personal en seguridad, innovación y eficiencia energética.",
-      contenido:
-        "El programa de capacitación busca fortalecer las competencias técnicas de los trabajadores, fomentando una cultura de mejora continua en toda la organización.",
-      imagen: "/capa.jpg",
-    },
-     {
-      id: 4,
-      titulo: "Capacitaciones Técnicas",
-      fecha: "20 de septiembre de 2025",
-      resumen:
-        "UNIENERGÍA impulsa la formación continua del personal en seguridad, innovación y eficiencia energética.",
-      contenido:
-        "El programa de capacitación busca fortalecer las competencias técnicas de los trabajadores, fomentando una cultura de mejora continua en toda la organización.",
-      imagen: "/capa.jpg",
-    },
-     {
-      id: 4,
-      titulo: "Capacitaciones Técnicas",
-      fecha: "20 de septiembre de 2025",
-      resumen:
-        "UNIENERGÍA impulsa la formación continua del personal en seguridad, innovación y eficiencia energética.",
-      contenido:
-        "El programa de capacitación busca fortalecer las competencias técnicas de los trabajadores, fomentando una cultura de mejora continua en toda la organización.",
-      imagen: "/capa.jpg",
-    },
-  ];
+  useEffect(() => {
+    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:1337/api";
 
-  const abrirModal = (noticia) => {
-    setNoticiaSeleccionada(noticia);
-    document.body.style.overflow = "hidden";
-  };
+    axios
+      .get(`${apiUrl}/blognoticias?populate=*`)
+      .then((res) => {
+        console.log("✅ Datos recibidos:", res.data);
+        setPosts(res.data?.data || []);
+      })
+      .catch((err) => console.error("❌ Error cargando noticias:", err))
+      .finally(() => setLoading(false));
+  }, []);
 
-  const cerrarModal = () => {
-    setNoticiaSeleccionada(null);
-    document.body.style.overflow = "auto";
-  };
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-96 text-gray-300 text-lg">
+        Cargando noticias...
+      </div>
+    );
+  }
 
   return (
     <section
       id="blog"
-      className="relative py-20 bg-gradient-to-r from-[#0B2C61] via-[#0A1B3C] to-[#020617] text-white overflow-hidden mb-10"
+      className="py-20 bg-gradient-to-br from-[#0033A0] via-[#0B2C61] to-[#001B44] text-white relative overflow-hidden"
     >
-     
+      <div className="absolute inset-0 bg-[url('/textures/noise.png')] opacity-10 pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 mb-10">
-        <header className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold text-center mb-10 text-gray-100 leading-[1.15] pb-3">
-            Blog de Noticias.
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Conoce las últimas novedades, proyectos e iniciativas de UNIENERGÍA
-            en el sector energético, social y ambiental.
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <h2 className="text-4xl font-extrabold text-center mb-4 tracking-tight">
+          Blog y Noticias
+        </h2>
+        <p className="text-center text-gray-200 mb-12 max-w-2xl mx-auto">
+          Conoce las últimas actualizaciones, proyectos y novedades de UNIENERGÍA.
+        </p>
+
+        {posts.length === 0 ? (
+          <p className="text-center text-gray-300">
+            No hay noticias publicadas por el momento.
           </p>
-        </header>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-8">
+            {posts.map((post, index) => {
+              const contenidoPlano =
+                Array.isArray(post.contenido) &&
+                post.contenido[0]?.children &&
+                post.contenido[0].children[0]?.text
+                  ? post.contenido[0].children[0].text
+                  : "Sin contenido";
 
-        {/* Listado de Noticias */}
-        <main className="grid md:grid-cols-3 gap-10" aria-label="Noticias recientes">
-          {noticias.map((noticia) => (
-            <article
-              key={noticia.id}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-6 
-                         hover:scale-[1.03] hover:bg-white/15 transition-all duration-300"
-            >
-              <figure>
-                <img
-                  src={noticia.imagen}
-                  alt={`Imagen de ${noticia.titulo}`}
-                  className="w-full h-48 object-cover rounded-xl mb-4"
-                  loading="lazy"
-                />
-              </figure>
-              <h2 className="text-2xl font-bold mb-2">{noticia.titulo}</h2>
-              <time className="text-sm text-gray-300 block mb-2">
-                {noticia.fecha}
-              </time>
-              <p className="text-gray-200 mb-4">{noticia.resumen}</p>
-              <button
-                onClick={() => abrirModal(noticia)}
-                className="px-4 py-2 rounded-lg font-semibold text-white 
-                           bg-gradient-to-r from-[#4CA23C] to-[#2C7A1F] hover:scale-105 transition-transform"
-              >
-                Leer más
-              </button>
-            </article>
-          ))}
-        </main>
+              const imagenUrl = post.imagen?.[0]?.formats?.medium?.url || post.imagen?.[0]?.url;
+
+
+              return (
+                <motion.article
+                  key={post.id || index}
+                  className="backdrop-blur-xl bg-white/10 border border-white/20 shadow-xl rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                  whileHover={{ scale: 1.03 }}
+                  onClick={() => setSelectedPost(post)}
+                >
+                  {imagenUrl && (
+                    <img
+                      src={`http://localhost:1337${imagenUrl}`}
+                      alt={post.titulo}
+                      className="w-full h-56 object-cover rounded-t-2xl opacity-90 hover:opacity-100 transition-all duration-300"
+                    />
+                  )}
+
+                  <div className="p-6">
+                    <h3 className="text-2xl font-semibold mb-2 text-white">
+                      {post.titulo}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-3">
+                      {new Date(post.fecha).toLocaleDateString()} — {post.autor}
+                    </p>
+                    <p className="text-gray-100 text-sm leading-relaxed mb-4 line-clamp-3">
+                      {contenidoPlano}
+                    </p>
+                    <motion.button
+                      className="text-[#4CA23C] font-semibold hover:underline"
+                      whileTap={{ scale: 0.95 }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedPost(post);
+                      }}
+                    >
+                      Leer más →
+                    </motion.button>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+        )}
       </div>
 
-      {/* Modal Detalle Noticia */}
-      {noticiaSeleccionada && (
-        <div
-          className="fixed inset-0 flex items-center justify-center z-50 backdrop-blur-md bg-black/50"
-          onClick={cerrarModal}
-        >
-          <article
-            className="relative bg-white/10 backdrop-blur-xl border border-white/20 text-white 
-                       max-w-3xl mx-4 rounded-2xl shadow-2xl p-8 animate-fadeIn"
-            onClick={(e) => e.stopPropagation()}
+      {/* MODAL */}
+      <AnimatePresence>
+        {selectedPost && (
+          <motion.div
+            className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
-            <button
-              onClick={cerrarModal}
-              className="absolute top-3 right-3 text-gray-300 hover:text-white text-2xl"
-              aria-label="Cerrar noticia"
+            <motion.div
+              className="bg-white/10 border border-white/20 rounded-3xl backdrop-blur-2xl p-8 max-w-2xl w-full text-white relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
             >
-              ✕
-            </button>
-            <figure>
-              <img
-                src={noticiaSeleccionada.imagen}
-                alt={noticiaSeleccionada.titulo}
-                className="w-full h-64 object-cover rounded-xl mb-4"
-                loading="lazy"
-              />
-            </figure>
-            <h2 className="text-3xl font-bold mb-2 text-[#4CA23C]">
-              {noticiaSeleccionada.titulo}
-            </h2>
-            <time className="text-sm text-gray-300 block mb-4">
-              {noticiaSeleccionada.fecha}
-            </time>
-            <p className="text-gray-200 leading-relaxed">
-              {noticiaSeleccionada.contenido}
-            </p>
-          </article>
-        </div>
-      )}
+              <button
+                className="absolute top-4 right-4 text-gray-300 hover:text-white text-xl"
+                onClick={() => setSelectedPost(null)}
+              >
+                ✕
+              </button>
 
-      {/* Animación */}
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
-        }
-        .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
-      `}</style>
+             {selectedPost?.imagen?.length > 0 && (
+                <img
+                  src={`http://localhost:1337${
+                    selectedPost.imagen?.[0]?.formats?.large?.url ||
+                    selectedPost.imagen?.[0]?.formats?.medium?.url ||
+                    selectedPost.imagen?.[0]?.url
+                  }`}
+                  alt={selectedPost.titulo}
+                  className="rounded-2xl mb-6 shadow-lg w-full object-cover max-h-80 opacity-95 hover:opacity-100 transition-all duration-500"
+                />
+              )}
+
+
+              <h3 className="text-3xl font-bold mb-2">{selectedPost.titulo}</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                {new Date(selectedPost.fecha).toLocaleDateString()} —{" "}
+                {selectedPost.autor}
+              </p>
+              <p className="text-gray-100 leading-relaxed">
+                {Array.isArray(selectedPost.contenido)
+                  ? selectedPost.contenido
+                      .map((b) =>
+                        b.children ? b.children.map((c) => c.text).join(" ") : ""
+                      )
+                      .join("\n\n")
+                  : selectedPost.contenido}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
-};
-
-export default BlogNoticias;
+}
