@@ -11,6 +11,7 @@ const ServiciosPetroleros = lazy(() => import("./Components/ServiciosPetroleros"
 const Responsabilidad = lazy(() => import("./Components/Responsabilidad"));
 const BlogNoticias = lazy(() => import("./Components/BlogNoticias"));
 const Contacto = lazy(() => import("./Components/Contacto"));
+const CookieConsent = lazy(() => import("./Components/CookieConsent"));
 
 function App() {
   return (
@@ -108,6 +109,7 @@ function App() {
           <Responsabilidad />
           <BlogNoticias />
           <Contacto />
+          <CookieConsent />
         </Suspense>
       </main>
       <Footer />
