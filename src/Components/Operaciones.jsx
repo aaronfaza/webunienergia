@@ -106,7 +106,7 @@ export default function Operaciones() {
           id="titulo-operaciones"
           className="text-4xl md:text-5xl font-extrabold text-[#0B2C61]"
         >
-          Operaciones en el Lote IX
+          Operaciones Lote IX
         </h2>
 
         <p
