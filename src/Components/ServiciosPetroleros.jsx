@@ -34,7 +34,7 @@ const servicios = [
   {
     titulo: "PERFILAJE Y PUNZONAMIENTO",
     descripcion:
-      "UNIPETRO ABC cuenta con una moderna unidad de Registro y Punzonamiento, montado sobre el chasis de un camión FREIGHTLINER modelo FL‐112.",
+      "Unienergia ABC cuenta con una moderna unidad de Registro y Punzonamiento, montado sobre el chasis de un camión FREIGHTLINER modelo FL‐112.",
     imagen: "/servicio-mantenimiento.jpg",
     alt: "PERFILAJE Y PUNZONAMIENTO",
   },
