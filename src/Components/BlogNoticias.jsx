@@ -7,11 +7,13 @@ export default function BlogNoticias() {
   const [loading, setLoading] = useState(true);
   const [selectedPost, setSelectedPost] = useState(null);
 
-  useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:1337/api";
+  // ✅ Usa variable de entorno o IP pública
+  const apiBase = import.meta.env.VITE_API_URL || "http://162.248.52.70:1337/api";
+  const serverBase = apiBase.replace("/api", ""); // http://162.248.52.70:1337
 
+  useEffect(() => {
     axios
-      .get(`${apiUrl}/blognoticias?populate=*`)
+      .get(`${apiBase}/blognoticias?populate=*`)
       .then((res) => {
         console.log("✅ Datos recibidos:", res.data);
         setPosts(res.data?.data || []);
@@ -57,8 +59,8 @@ export default function BlogNoticias() {
                   ? post.contenido[0].children[0].text
                   : "Sin contenido";
 
-              const imagenUrl = post.imagen?.[0]?.formats?.medium?.url || post.imagen?.[0]?.url;
-
+              const imagenUrl =
+                post.imagen?.[0]?.formats?.medium?.url || post.imagen?.[0]?.url;
 
               return (
                 <motion.article
@@ -69,7 +71,7 @@ export default function BlogNoticias() {
                 >
                   {imagenUrl && (
                     <img
-                      src={`http://localhost:1337${imagenUrl}`}
+                      src={`${serverBase}${imagenUrl}`} // ✅ corregido
                       alt={post.titulo}
                       className="w-full h-56 object-cover rounded-t-2xl opacity-90 hover:opacity-100 transition-all duration-300"
                     />
@@ -126,18 +128,17 @@ export default function BlogNoticias() {
                 ✕
               </button>
 
-             {selectedPost?.imagen?.length > 0 && (
+              {selectedPost?.imagen?.length > 0 && (
                 <img
-                  src={`http://localhost:1337${
+                  src={`${serverBase}${
                     selectedPost.imagen?.[0]?.formats?.large?.url ||
                     selectedPost.imagen?.[0]?.formats?.medium?.url ||
                     selectedPost.imagen?.[0]?.url
-                  }`}
+                  }`} // ✅ corregido
                   alt={selectedPost.titulo}
                   className="rounded-2xl mb-6 shadow-lg w-full object-cover max-h-80 opacity-95 hover:opacity-100 transition-all duration-500"
                 />
               )}
-
 
               <h3 className="text-3xl font-bold mb-2">{selectedPost.titulo}</h3>
               <p className="text-gray-300 text-sm mb-4">
