@@ -84,7 +84,7 @@ export default function Contacto() {
               <h2 className="font-manrope font-semibold text-lg text-[#000000]">
                 Teléfono
               </h2>
-              <p className="font-opensans text-[#9A999D]">+51 987 654 321</p>
+              <p className="font-opensans text-[#9A999D]">+051 442-2277</p>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export default function Contacto() {
                 Ubicación
               </h2>
               <p className="font-opensans text-[#9A999D]">
-                Av. Canaval y Moreyra 425, San Isidro 15047
+                Av. Canaval y Moreyra 425 Of. 31  San Isidro
               </p>
             </div>
           </div>

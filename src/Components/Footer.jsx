@@ -58,13 +58,13 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-4">Contáctanos</h4>
           <ul className="space-y-3 text-gray-300 text-sm">
             <li className="flex items-center gap-2">
-              <Phone size={18} /> +51 987 654 321
+              <Phone size={18} /> +051 442-2277
             </li>
             <li className="flex items-center gap-2">
               <Mail size={18} /> contacto@unienergia.pe
             </li>
             <li className="flex items-center gap-2">
-              Lima: Av. Canaval y Moreyra 425 31, Lima, Perú.
+              Lima:  Av. Canaval y Moreyra 425 Of. 31  San Isidro
             </li>
             <li className="flex items-center gap-2">
               Operaciones: Calle Tarapacá PARIÑAS, TALARA, PIURA.
