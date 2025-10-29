@@ -8,19 +8,19 @@ const actividades = {
       titulo: "Monitoreo de aire",
       descripcion:
         "Controlamos la calidad del aire con equipos especializados que garantizan el cumplimiento de las normas ambientales.",
-      imagen: "/aire.jpg",
+      imagen: "/aire1.jpeg",
     },
     {
       titulo: "Revegetación",
       descripcion:
         "Promovemos la siembra de especies nativas para recuperar zonas afectadas y proteger la biodiversidad local.",
-      imagen: "/revegetacion.jpg",
+      imagen: "/planta1.jpeg",
     },
     {
-      titulo: "Cuidado de suelos",
+      titulo: "Manejo de Residuos",
       descripcion:
         "Aplicamos prácticas de conservación para evitar la erosión y mantener la fertilidad del suelo.",
-      imagen: "/suelos.jpg",
+      imagen: "/suelos1.jpeg",
     },
   ],
   social: [
