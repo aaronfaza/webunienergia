@@ -12,6 +12,7 @@ const Responsabilidad = lazy(() => import("./Components/Responsabilidad"));
 const BlogNoticias = lazy(() => import("./Components/BlogNoticias"));
 const Contacto = lazy(() => import("./Components/Contacto"));
 const CookieConsent = lazy(() => import("./Components/CookieConsent"));
+const Comunicado = lazy(() => import("./Components/Comunicado"));
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         {/* ✅ Título claro y optimizado */}
         <title>Unienergia: Energía y Servicios Petroleros | Inicio</title>
 
-        {/* ✅ Descripción atractiva y rica en palabras clave */}
+        {/* ✅ Descripción atractiva */}
         <meta
           name="description"
           content="UNIENERGÍA, empresa vinculada a la Universidad Nacional de Ingeniería (UNI), impulsa proyectos energéticos responsables, sostenibles e innovadores. Energías eficientes, servicios petroleros y compromiso con el desarrollo del Perú."
@@ -32,7 +33,7 @@ function App() {
         <meta name="theme-color" content="#0033A0" />
         <link rel="canonical" href="https://www.unienergia.pe/" />
 
-        {/* ✅ Open Graph (para compartir en redes) */}
+        {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.unienergia.pe/" />
         <meta property="og:title" content="Unienergia | Energía y Servicios Petroleros" />
@@ -63,7 +64,7 @@ function App() {
           `}
         </script>
 
-        {/* ✅ JSON-LD para SEO estructurado */}
+        {/* ✅ JSON-LD */}
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -102,6 +103,9 @@ function App() {
             </div>
           }
         >
+          {/* 👇 Flyer del comunicado */}
+          <Comunicado />
+
           <Hero />
           <Nosotros />
           <Operaciones />
