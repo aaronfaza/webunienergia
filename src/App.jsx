@@ -104,8 +104,7 @@ function App() {
           }
         >
           {/* 👇 Flyer del comunicado */}
-          <Comunicado />
-
+         
           <Hero />
           <Nosotros />
           <Operaciones />
