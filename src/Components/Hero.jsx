@@ -45,13 +45,13 @@ const Hero = memo(() => {
       <div className="relative z-20 text-left px-6 md:px-16 lg:px-24 max-w-6xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
           <span className="block text-[#AEE5AC] text-sm md:text-base uppercase tracking-widest mb-2">
-            Bienvenido a
+            Bienvenido:
           </span>
           Empresa de Recursos Energéticos{" "}
           <span
             className="inline-block align-baseline bg-gradient-to-r from-[#6CA01C] via-[#4CA23C] to-[#4CA23C] bg-clip-text text-transparent"
           >
-            UNIENERGÍA ABC
+            UNIENERGÍAS
           </span>
 
         </h1>
