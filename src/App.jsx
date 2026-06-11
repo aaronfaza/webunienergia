@@ -103,7 +103,6 @@ function App() {
             </div>
           }
         >
-          {/* 👇 Flyer del comunicado */}
          
           <Hero />
           <Nosotros />
