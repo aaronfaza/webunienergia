@@ -12,7 +12,7 @@ const Responsabilidad = lazy(() => import("./Components/Responsabilidad"));
 const BlogNoticias = lazy(() => import("./Components/BlogNoticias"));
 const Contacto = lazy(() => import("./Components/Contacto"));
 const CookieConsent = lazy(() => import("./Components/CookieConsent"));
-const Comunicado = lazy(() => import("./Components/Comunicado"));
+
 
 function App() {
   return (
