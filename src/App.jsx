@@ -8,6 +8,7 @@ const Nosotros = lazy(() => import("./Components/Nosotros"));
 const Operaciones = lazy(() => import("./Components/Operaciones"));
 const ServiciosPetroleros = lazy(() => import("./Components/ServiciosPetroleros"));
 const Responsabilidad = lazy(() => import("./Components/Responsabilidad"));
+const Transparencia = lazy(() => import("./Components/Transparencia"));
 const BlogNoticias = lazy(() => import("./Components/BlogNoticias"));
 const Contacto = lazy(() => import("./Components/Contacto"));
 
@@ -27,7 +28,8 @@ function App() {
         <Operaciones />
         <ServiciosPetroleros />
         <Responsabilidad />
-        <BlogNoticias /> 
+        <Transparencia />
+        <BlogNoticias />
         <Contacto />
       </Suspense>
       <Footer />

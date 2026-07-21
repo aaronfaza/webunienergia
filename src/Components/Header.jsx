@@ -26,6 +26,7 @@ const navLinks = [
 { href: "#operaciones", label: "Operaciones" },
 { href: "#servicios", label: "Servicios" },
 { href: "#responsabilidad", label: "Responsabilidad" },
+{ href: "#transparencia", label: "Transparencia" },
 { href: "#blog", label: "Blog de Noticias" },
 { href: "#contacto", label: "Contacto" },
 ];
