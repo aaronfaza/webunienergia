@@ -61,7 +61,7 @@ export default function Footer() {
               <Phone size={18} /> +051 442-2277
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={18} /> contacto@unienergia.pe
+              <Mail size={18} /> contacto@unienergia.pes
             </li>
             <li className="flex items-center gap-2">
               Lima:  Av. Canaval y Moreyra 425 Of. 31  San Isidro
