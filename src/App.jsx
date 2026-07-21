@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import TransparenciaRendicion from "./Components/TransparenciaRendicion";
 
 // ✅ Lazy load de secciones (mejor LCP y menor tamaño inicial)
 const Hero = lazy(() => import("./Components/Hero"));
@@ -110,6 +111,7 @@ function App() {
           <ServiciosPetroleros />
           <Responsabilidad />
           <BlogNoticias />
+          <TransparenciaRendicion />
           <Contacto />
           <CookieConsent />
         </Suspense>

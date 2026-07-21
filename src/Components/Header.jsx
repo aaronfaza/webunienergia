@@ -20,13 +20,14 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "#inicio", label: "Inicio" },
-    { href: "#nosotros", label: "Nosotros" },
-    { href: "#operaciones", label: "Operaciones" },
-    { href: "#servicios", label: "Servicios" },
-    { href: "#responsabilidad", label: "Responsabilidad" },
-    { href: "#blog", label: "Blog de Noticias" },
-    { href: "#contacto", label: "Contacto" },
+  { href: "#inicio", label: "Inicio" },
+  { href: "#nosotros", label: "Nosotros" },
+  { href: "#operaciones", label: "Operaciones" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#responsabilidad", label: "Responsabilidad" },
+  { href: "#transparencia-rendicion", label: "Transparencia" },
+  { href: "#blog", label: "Blog de Noticias" },
+  { href: "#contacto", label: "Contacto" },
   ];
 
   return (
