@@ -110,8 +110,8 @@ function App() {
           <Operaciones />
           <ServiciosPetroleros />
           <Responsabilidad />
-          <BlogNoticias />
           <TransparenciaRendicion />
+          <BlogNoticias />
           <Contacto />
           <CookieConsent />
         </Suspense>

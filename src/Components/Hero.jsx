@@ -147,7 +147,7 @@ const Hero = memo(function Hero() {
                 </div>
 
                 <h2 className="text-2xl font-black tracking-tight">
-                  UNIENERGÍAS
+                  UNIENERGÍA
                 </h2>
 
                 <p className="mt-3 text-sm leading-7 text-white/75">

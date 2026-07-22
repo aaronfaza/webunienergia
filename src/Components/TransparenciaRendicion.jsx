@@ -4,19 +4,19 @@ import "./TransparenciaRendicion.css";
 const documentos = [
   {
     id: 1,
-    titulo: "Informe de Rendición de Cuentas 2024",
+    titulo: "RENDICIÓN DE CUENTAS DE TITULARES - JULIO - 2026",
     descripcion:
       "Documento presentado a la Contraloría General de la República.",
-    periodo: "Año 2024",
-    archivo: "/documentos/informe-rendicion-cuentas-2024.pdf",
+    periodo: "Año 2026",
+    archivo: "/documentos/RENDICIÓN DE CUENTAS DE TITULARES - JULIO - 2026.pdf",
   },
   {
     id: 2,
-    titulo: "Plan de Acción y Seguimiento 2024",
+    titulo: "TRANSFERENCIA DE GESTIÓN DE EMPRESA DEL ESTADO Y OTROS ORGANISMOS SUJETOS A CONTROL JULIO - 2026",
     descripcion:
       "Documento presentado a la Contraloría General de la República.",
-    periodo: "Año 2024",
-    archivo: "/documentos/plan-accion-seguimiento-2024.pdf",
+    periodo: "Año 2026",
+    archivo: "/documentos/INFORME TRANSFERENCIA DE GESTIÓN DE EMPRESA DEL ESTADO Y OTROS ORGANISMOS SUJETOS A CONTROL JULIO - 2026.pdf",
   },
 ];
 
@@ -132,7 +132,7 @@ function TransparenciaRendicion() {
     >
       <div className="transparencia-container">
         <header className="transparencia-header">
-          <IconoCabecera />
+
 
           <p className="transparencia-eyebrow">Información institucional</p>
 
