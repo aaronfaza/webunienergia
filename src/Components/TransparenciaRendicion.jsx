@@ -4,19 +4,19 @@ import "./TransparenciaRendicion.css";
 const documentos = [
   {
     id: 1,
-    titulo: "RENDICIÓN DE CUENTAS DE TITULARES - JULIO - 2026",
+    titulo: "RENDICIÓN DE CUENTAS DE TITULARES",
     descripcion:
       "Documento presentado a la Contraloría General de la República.",
     periodo: "Año 2026",
-    archivo: "/documentos/RENDICIÓN DE CUENTAS DE TITULARES - JULIO - 2026.pdf",
+    archivo: "/documentos/RENDICIÓN DE CUENTAS DE TITULARES.pdf",
   },
   {
     id: 2,
-    titulo: "TRANSFERENCIA DE GESTIÓN DE EMPRESA DEL ESTADO Y OTROS ORGANISMOS SUJETOS A CONTROL JULIO - 2026",
+    titulo: "TRANSFERENCIA DE GESTIÓN DE EMPRESA DEL ESTADO Y OTROS ORGANISMOS SUJETOS A CONTROL",
     descripcion:
       "Documento presentado a la Contraloría General de la República.",
     periodo: "Año 2026",
-    archivo: "/documentos/INFORME TRANSFERENCIA DE GESTIÓN DE EMPRESA DEL ESTADO Y OTROS ORGANISMOS SUJETOS A CONTROL JULIO - 2026.pdf",
+    archivo: "/documentos/INFORME TRANSFERENCIA DE GESTIÓN DE EMPRESA DEL ESTADO Y OTROS ORGANISMOS SUJETOS A CONTROL.pdf",
   },
 ];
 
