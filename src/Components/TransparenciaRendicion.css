@@ -1,0 +1,322 @@
+.transparencia-section {
+  background: #f3f8f5 !important;
+  padding: 100px 20px !important;
+}
+
+
+.transparencia-section {
+  --transparencia-verde: #075e4b;
+  --transparencia-verde-claro: #15936b;
+  --transparencia-texto: #34433f;
+  --transparencia-borde: #dfe7e3;
+
+  width: 100%;
+  padding: 90px 24px 100px;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(20, 140, 101, 0.07),
+      transparent 35%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f5f8f6 100%);
+  font-family: inherit;
+}
+
+.transparencia-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.transparencia-header {
+  max-width: 830px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.transparencia-heading-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 10px;
+  color: var(--transparencia-verde);
+}
+
+.transparencia-eyebrow {
+  margin: 0 0 8px;
+  color: var(--transparencia-verde-claro);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.transparencia-header h2 {
+  margin: 0;
+  color: var(--transparencia-verde);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+.transparencia-title-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0 17px;
+  color: var(--transparencia-verde-claro);
+}
+
+.transparencia-title-detail span {
+  width: 64px;
+  height: 1px;
+  background: rgba(7, 94, 75, 0.28);
+}
+
+.transparencia-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #53615d;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.transparencia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.transparencia-card {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 22px;
+  min-height: 265px;
+  padding: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--transparencia-borde);
+  border-radius: 18px;
+  box-shadow:
+    0 12px 35px rgba(16, 53, 43, 0.08),
+    0 2px 8px rgba(16, 53, 43, 0.04);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.transparencia-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(21, 147, 107, 0.38);
+  box-shadow:
+    0 20px 45px rgba(16, 53, 43, 0.12),
+    0 3px 10px rgba(16, 53, 43, 0.06);
+}
+
+.transparencia-card-document {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.transparencia-pdf-icon {
+  position: relative;
+  width: 88px;
+  flex-shrink: 0;
+}
+
+.transparencia-pdf-icon svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 7px 9px rgba(0, 0, 0, 0.08));
+}
+
+.transparencia-pdf-icon span {
+  position: absolute;
+  top: 27px;
+  left: -3px;
+  min-width: 48px;
+  padding: 5px 8px;
+  color: #ffffff;
+  background: #e31b23;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(227, 27, 35, 0.24);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.transparencia-card-content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.transparencia-card-content h3 {
+  margin: 1px 0 9px;
+  color: var(--transparencia-verde);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.transparencia-card-content > p {
+  margin: 0 0 14px;
+  color: var(--transparencia-texto);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.transparencia-periodo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: auto 0 17px;
+  color: #5d6965;
+  font-size: 13px;
+}
+
+.transparencia-periodo svg {
+  flex-shrink: 0;
+  color: var(--transparencia-verde-claro);
+}
+
+.transparencia-periodo strong {
+  color: #34433f;
+  font-weight: 700;
+}
+
+.transparencia-actions {
+  display: flex;
+  min-height: 47px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3px 6px;
+  border: 1.5px solid var(--transparencia-verde-claro);
+  border-radius: 10px;
+}
+
+.transparencia-button {
+  display: inline-flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 8px;
+  color: var(--transparencia-verde);
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.transparencia-button:hover {
+  color: #ffffff;
+  background: var(--transparencia-verde);
+}
+
+.transparencia-button svg {
+  flex-shrink: 0;
+}
+
+.transparencia-actions-divider {
+  width: 1px;
+  height: 24px;
+  flex-shrink: 0;
+  background: rgba(7, 94, 75, 0.35);
+}
+
+@media (max-width: 950px) {
+  .transparencia-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transparencia-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .transparencia-section {
+    padding: 65px 16px 75px;
+  }
+
+  .transparencia-header {
+    margin-bottom: 32px;
+  }
+
+  .transparencia-header h2 {
+    font-size: 29px;
+    letter-spacing: -0.3px;
+  }
+
+  .transparencia-intro {
+    font-size: 14px;
+  }
+
+  .transparencia-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 15px;
+    padding: 21px 17px;
+    border-radius: 14px;
+  }
+
+  .transparencia-pdf-icon {
+    width: 70px;
+  }
+
+  .transparencia-pdf-icon span {
+    top: 21px;
+    min-width: 39px;
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+
+  .transparencia-card-content h3 {
+    font-size: 17px;
+  }
+
+  .transparencia-card-content > p {
+    font-size: 13px;
+  }
+
+  .transparencia-actions {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 9px;
+  }
+
+  .transparencia-button {
+    padding: 12px 8px;
+  }
+
+  .transparencia-actions-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 430px) {
+  .transparencia-card {
+    grid-template-columns: 1fr;
+  }
+
+  .transparencia-card-document {
+    justify-content: flex-start;
+  }
+
+  .transparencia-pdf-icon {
+    width: 68px;
+  }
+}

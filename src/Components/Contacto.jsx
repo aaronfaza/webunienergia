@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import emailjs from "@emailjs/browser"; // npm install @emailjs/browser
+import emailjs from "@emailjs/browser";
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -20,9 +20,9 @@ export default function Contacto() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = "service_5d02bls";
-    const templateID = "template_imjt47v";
-    const publicKey = "e5QKiKOWlzgD6jaSb";
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     emailjs
       .send(serviceID, templateID, formData, publicKey)
@@ -42,20 +42,19 @@ export default function Contacto() {
       id="contacto"
       className="relative py-20 bg-gradient-to-r from-[#E6D9AA]/20 via-white to-[#E6D9AA]/20 text-gray-900 overflow-hidden"
     >
-      {/* Título principal */}
+      
+
       <div className="text-center mb-12">
-        <h2 className="font-manrope text-4xl md:text-5xl font-extrabold text-[#711610]">
+        <h1 className="font-manrope text-4xl md:text-5xl font-extrabold text-[#711610]">
           Contáctanos
-        </h2>
+        </h1>
         <p className="mt-4 font-opensans text-[#9A999D] max-w-xl mx-auto">
           Estamos aquí para responder tus consultas, escuchar tus ideas y
           construir soluciones energéticas contigo.
         </p>
       </div>
 
-      {/* Contenedor principal */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 lg:px-12">
-        {/* Información de contacto */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -68,11 +67,11 @@ export default function Contacto() {
               <Mail className="text-white" />
             </div>
             <div>
-              <h4 className="font-manrope font-semibold text-lg text-[#000000]">
-                Correo
-              </h4>
+              <h2 className="font-manrope font-semibold text-lg text-[#000000]">
+                Correo electrónico
+              </h2>
               <p className="font-opensans text-[#9A999D]">
-                contacto@unienergia.com
+                contacto@unienergia.pe
               </p>
             </div>
           </div>
@@ -82,10 +81,10 @@ export default function Contacto() {
               <Phone className="text-white" />
             </div>
             <div>
-              <h4 className="font-manrope font-semibold text-lg text-[#000000]">
+              <h2 className="font-manrope font-semibold text-lg text-[#000000]">
                 Teléfono
-              </h4>
-              <p className="font-opensans text-[#9A999D]">+51 987 654 321</p>
+              </h2>
+              <p className="font-opensans text-[#9A999D]">+051 442-2277</p>
             </div>
           </div>
 
@@ -94,17 +93,16 @@ export default function Contacto() {
               <MapPin className="text-white" />
             </div>
             <div>
-              <h4 className="font-manrope font-semibold text-lg text-[#000000]">
+              <h2 className="font-manrope font-semibold text-lg text-[#000000]">
                 Ubicación
-              </h4>
+              </h2>
               <p className="font-opensans text-[#9A999D]">
-                Av. Canaval y Moreyra 425, San Isidro 15047
+                Av. Canaval y Moreyra 425 Of. 31  San Isidro
               </p>
             </div>
           </div>
         </motion.div>
 
-        {/* Formulario */}
         <motion.form
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 40 }}
@@ -114,44 +112,56 @@ export default function Contacto() {
           className="bg-white p-8 rounded-2xl shadow-xl space-y-6 border border-[#E6D9AA]/40"
         >
           <div>
-            <label className="block text-sm mb-2 font-manrope text-[#711610]">
+            <label
+              htmlFor="nombre"
+              className="block text-sm mb-2 font-manrope text-[#711610]"
+            >
               Nombre
             </label>
             <input
+              id="nombre"
               type="text"
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 font-opensans focus:ring-2 focus:ring-[#711610] outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 font-opensans focus:ring-2 focus:ring-[#711610] outline-none"
             />
           </div>
 
           <div>
-            <label className="block text-sm mb-2 font-manrope text-[#0033A0]">
+            <label
+              htmlFor="email"
+              className="block text-sm mb-2 font-manrope text-[#0033A0]"
+            >
               Correo electrónico
             </label>
             <input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 font-opensans focus:ring-2 focus:ring-[#0033A0] outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 font-opensans focus:ring-2 focus:ring-[#0033A0] outline-none"
             />
           </div>
 
           <div>
-            <label className="block text-sm mb-2 font-manrope text-[#4CA23C]">
+            <label
+              htmlFor="mensaje"
+              className="block text-sm mb-2 font-manrope text-[#4CA23C]"
+            >
               Mensaje
             </label>
             <textarea
+              id="mensaje"
               name="mensaje"
               value={formData.mensaje}
               onChange={handleChange}
               rows="4"
               required
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 font-opensans focus:ring-2 focus:ring-[#4CA23C] outline-none transition resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 font-opensans focus:ring-2 focus:ring-[#4CA23C] outline-none resize-none"
             />
           </div>
 
@@ -178,4 +188,3 @@ export default function Contacto() {
     </section>
   );
 }
-
